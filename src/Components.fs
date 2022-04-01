@@ -40,7 +40,7 @@ type Components =
                 | [ "hello" ] -> Components.HelloWorld()
                 | [ "counter" ] -> Components.Counter()
                 | [ "button" ] -> Components.Button.Group()
-                | [ "popover" ] -> Components.Popover.WithData()
+                | [ "popover" ] -> Components.Popover.WithDataAndActions()
                 | otherwise -> Html.h1 "Not found"
             ]
         ]
