@@ -15,7 +15,7 @@ type Components =
     [<ReactComponent>]
     static member Wrapper (child: Fable.React.ReactElement) =
         Html.div [
-            prop.classes [ "my-8" ]
+            prop.classes [ "m-8" ]
             prop.children [
                 child
             ]

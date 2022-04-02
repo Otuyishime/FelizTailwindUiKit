@@ -3,38 +3,55 @@ namespace Components
 
 module ProgressBar =
     open Feliz
-    open Fable.AST.Babel
 
     [<ReactComponent>]
-    let Small() = 
+    let ThinWithSubText() = 
         Html.button [
-            prop.classes [ 
-                "mx-2" 
-                "my-2" 
-                "bg-white" 
-                "transition" 
-                "duration-150" 
-                "ease-in-out" 
-                "focus:outline-none" 
-                "rounded" 
-                "text-gray-800" 
-                "border" 
-                "border-gray-300" 
-                "px-4" 
-                "py-1.5" 
-                "text-xs"
-                "shadow"
-                "hover:bg-gray-200"
+            // w- defines the progress bar size
+            prop.classes [ "w-11/12 lg:w-3/6 mx-auto" ]
+            prop.children [
+                Html.div [
+                    prop.classes [ "flex justify-between items-center pb-2 flex-col" ]
+                    prop.children [
+                        Html.p [
+                            prop.classes [ "text-m text-indigo-700 font-semibold" ]
+                            prop.text "63% Complete"
+                        ]
+                        Html.p [
+                            prop.classes [ "text-sm font-normal text-gray-700" ]
+                            prop.text "Please wait while your transaction is processed"
+                        ]
+                    ]
+                ]
+                Html.div [
+                    prop.classes [ "flex items-center" ]
+                    prop.children [
+                        Html.div [
+                            prop.classes [ "w-1/3 bg-indigo-700 h-1 rounded-tl rounded-bl mr-1" ]
+                        ]
+                        Html.div [
+                            prop.classes [ "w-1/3 bg-gray-200 h-1 mr-1 relative" ]
+                            prop.children [
+                                Html.div [
+                                    // w-4/6 defines the progress indicator
+                                    prop.classes [ "h-1 w-4/6 bg-indigo-700" ]
+                                ]
+                            ]
+                        ]
+                        Html.div [
+                            prop.classes [ "w-1/3 bg-gray-200 h-1 rounded-tr rounded-br" ]
+                        ]
+                    ]
+                    
+                ]
             ]
-            prop.text "Small Button"
-            prop.tabIndex 0
         ]
 
     
     [<ReactComponent>]
     let ThinWithSteps() =
         Html.div [
-            prop.classes [ "w-11/12 lg:w-2/6 mx-auto" ]
+            prop.classes [ "w-11/12 lg:w-3/6 mx-auto" ]
             prop.children [
                 Html.div [
                     prop.classes [ "bg-gray-200 h-1 flex items-center justify-between" ]
@@ -77,7 +94,7 @@ module ProgressBar =
                                     prop.classes [ "absolute right-0 -mr-2" ]
                                     prop.children [
                                         Html.div [
-                                            prop.classes [ "relative bg-white shadow-lg px-2 py-1 rounded mt-16 -mr-12" ]
+                                            prop.classes [ "relative bg-white shadow px-2 py-2 rounded mt-16 -mr-12" ]
                                             prop.children [
                                                 Svg.svg [
                                                     svg.xmlns "http://www.w3.org/2000/svg"
