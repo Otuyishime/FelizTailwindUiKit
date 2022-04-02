@@ -23,6 +23,7 @@ module Button =
                 "py-1.5" 
                 "text-xs"
                 "shadow"
+                "hover:bg-gray-200"
             ]
             prop.text "Small Button"
             prop.tabIndex 0
@@ -47,6 +48,7 @@ module Button =
                 "py-2" 
                 "text-sm"
                 "shadow"
+                "hover:bg-gray-200"
             ]
             prop.text "Standard Button"
             prop.tabIndex 0
@@ -63,17 +65,17 @@ module Button =
                     prop.ariaLabel "filter content by"
                     prop.children [
                         Html.button [
-                            prop.classes [ "py-2 px-6 flex items-center justify-center text-gray-800 text-sm rounded" ]
+                            prop.classes [ "py-2 px-6 flex items-center justify-center text-gray-800 text-sm rounded hover:bg-gray-200" ]
                             prop.role.tab
                             prop.text "Week"
                         ]
                         Html.button [
-                            prop.classes [ "py-2 px-6 flex items-center justify-center text-gray-800 text-sm rounded" ]
+                            prop.classes [ "py-2 px-6 flex items-center justify-center text-gray-800 text-sm rounded hover:bg-gray-200" ]
                             prop.role.tab
                             prop.text "Month"
                         ]
                         Html.button [
-                            prop.classes [ "py-2 px-6 flex items-center justify-center text-gray-800 text-sm rounded" ]
+                            prop.classes [ "py-2 px-6 flex items-center justify-center text-gray-800 text-sm rounded hover:bg-gray-200" ]
                             prop.role.tab
                             prop.text "Year"
                         ]
