@@ -2,6 +2,7 @@ namespace App
 
 open Feliz
 open Feliz.Router
+open Fable.React
 
 type Components =
     /// <summary>
@@ -10,6 +11,15 @@ type Components =
     /// </summary>
     [<ReactComponent>]
     static member HelloWorld() = Html.h1 "Hello World"
+    
+    [<ReactComponent>]
+    static member Wrapper (child: Fable.React.ReactElement) =
+        Html.div [
+            prop.classes [ "my-8" ]
+            prop.children [
+                child
+            ]
+        ]
 
     /// <summary>
     /// A stateful React component that maintains a counter
@@ -41,6 +51,7 @@ type Components =
                 | [ "counter" ] -> Components.Counter()
                 | [ "button" ] -> Components.Button.Small()
                 | [ "popover" ] -> Components.Popover.WithData()
+                | [ "progressbar" ] -> Components.Wrapper(Components.ProgressBar.ThinWithSteps())
                 | otherwise -> Html.h1 "Not found"
             ]
         ]
