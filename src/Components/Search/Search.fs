@@ -73,8 +73,11 @@ module Search =
                         .parentElement
                         .parentElement
                         .children[2]
-                let currentValue = currentEl?innerText |> int
-                currentEl?innerText <- ((currentValue + 1000) |> string)
+                try
+                    let currentValue = currentEl?innerText |> int
+                    currentEl?innerText <- ((currentValue + 1000) |> string)
+                with
+                | ex -> ()
 
         let minusMe = 
             fun (el: MouseEvent) ->
@@ -83,9 +86,12 @@ module Search =
                         .parentElement
                         .parentElement
                         .children[2]
-                let currentValue = currentEl?innerText |> int
-                if (currentValue > 0) 
-                then currentEl?innerText <- ((currentValue - 1000) |> string)
+                try
+                    let currentValue = currentEl?innerText |> int
+                    if (currentValue > 0) 
+                    then currentEl?innerText <- ((currentValue - 1000) |> string)
+                with
+                | ex -> ()
 
 
         Html.div [
