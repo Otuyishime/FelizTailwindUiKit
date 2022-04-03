@@ -52,6 +52,7 @@ type Components =
                 | [ "button" ] -> Components.Button.Small()
                 | [ "popover" ] -> Components.Popover.WithData()
                 | [ "progressbar" ] -> Components.Wrapper(Components.ProgressBar.ThinWithSteps())
+                | [ "search" ] -> Components.Search.Small()
                 | otherwise -> Html.h1 "Not found"
             ]
         ]
