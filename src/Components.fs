@@ -21,6 +21,15 @@ type Components =
             ]
         ]
 
+    [<ReactComponent>]
+    static member WrapperS (child: Fable.React.ReactElement, size: int) =
+        Html.div [
+            prop.classes [ "m-" + (string size) ]
+            prop.children [
+                child
+            ]
+        ]
+
     /// <summary>
     /// A stateful React component that maintains a counter
     /// </summary>
@@ -53,6 +62,7 @@ type Components =
                 | [ "popover" ] -> Components.Popover.WithData()
                 | [ "progressbar" ] -> Components.Wrapper(Components.ProgressBar.ThinWithSteps())
                 | [ "search" ] -> Components.Search.Small()
+                | [ "tooltip" ] -> Components.WrapperS(Components.Tooltip.WithSteps(), 10)
                 | otherwise -> Html.h1 "Not found"
             ]
         ]

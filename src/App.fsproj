@@ -9,6 +9,7 @@
         <Compile Include="Components/Popover/Popover.fs" />
         <Compile Include="Components/ProgressBar/ProgressBar.fs" />
         <Compile Include="Components/Search/Search.fs" />
+        <Compile Include="Components/Tooltip/Tooltip.fs" />
         <Compile Include="Components.fs" />
         <Compile Include="Main.fs" />
     </ItemGroup>
