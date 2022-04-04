@@ -63,6 +63,7 @@ type Components =
                 | [ "progressbar" ] -> Components.Wrapper(Components.ProgressBar.ThinWithSteps())
                 | [ "search" ] -> Components.Search.Small()
                 | [ "tooltip" ] -> Components.WrapperS(Components.Tooltip.WithSteps(), 10)
+                | [ "badge" ] -> Components.Wrapper(Components.Badge.WithCloseButton())
                 | otherwise -> Html.h1 "Not found"
             ]
         ]

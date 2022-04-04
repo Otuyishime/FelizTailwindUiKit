@@ -10,6 +10,7 @@
         <Compile Include="Components/ProgressBar/ProgressBar.fs" />
         <Compile Include="Components/Search/Search.fs" />
         <Compile Include="Components/Tooltip/Tooltip.fs" />
+        <Compile Include="Components/Badge/Badge.fs" />
         <Compile Include="Components.fs" />
         <Compile Include="Main.fs" />
     </ItemGroup>
