@@ -64,6 +64,7 @@ type Components =
                 | [ "search" ] -> Components.Search.Small()
                 | [ "tooltip" ] -> Components.WrapperS(Components.Tooltip.WithSteps(), 10)
                 | [ "badge" ] -> Components.Wrapper(Components.Badge.WithCloseButton())
+                | [ "avatar" ] -> Components.Wrapper(Components.Avatar.WithCircleStacked())
                 | otherwise -> Html.h1 "Not found"
             ]
         ]
