@@ -65,6 +65,7 @@ type Components =
                 | [ "tooltip" ] -> Components.WrapperS(Components.Tooltip.WithSteps(), 10)
                 | [ "badge" ] -> Components.Wrapper(Components.Badge.WithCloseButton())
                 | [ "avatar" ] -> Components.Wrapper(Components.Avatar.WithCircleStacked())
+                | [ "calendar" ] -> Components.Calendar.Small()
                 | otherwise -> Html.h1 "Not found"
             ]
         ]

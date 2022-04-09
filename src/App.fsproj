@@ -12,6 +12,7 @@
         <Compile Include="Components/Tooltip/Tooltip.fs" />
         <Compile Include="Components/Badge/Badge.fs" />
         <Compile Include="Components/Avatar/Avatar.fs" />
+        <Compile Include="Components/Calendar/Calendar.fs" />
         <Compile Include="Components.fs" />
         <Compile Include="Main.fs" />
     </ItemGroup>
