@@ -62,10 +62,11 @@ type Components =
                 | [ "popover" ] -> Components.Popover.WithData()
                 | [ "progressbar" ] -> Components.Wrapper(Components.ProgressBar.ThinWithSteps())
                 | [ "search" ] -> Components.Search.Small()
-                | [ "tooltip" ] -> Components.WrapperS(Components.Tooltip.WithSteps(), 10)
+                | [ "tooltip" ] -> Components.Tooltip.WithSteps()
                 | [ "badge" ] -> Components.Wrapper(Components.Badge.WithCloseButton())
                 | [ "avatar" ] -> Components.Wrapper(Components.Avatar.WithCircleStacked())
                 | [ "calendar" ] -> Components.Calendar.Small()
+                | [ "alert" ] -> Components.Wrapper(Components.Alert.WithTextActionButtons())
                 | otherwise -> Html.h1 "Not found"
             ]
         ]

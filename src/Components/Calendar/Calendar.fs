@@ -106,7 +106,10 @@ module Calendar =
                                 prop.classes [ "flex items-center justify-center w-full rounded-full cursor-pointer" ]
                                 prop.children [
                                     Html.p [
-                                        prop.classes [ "focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:bg-indigo-500 hover:bg-indigo-500 text-base w-8 h-8 flex items-center justify-center font-medium text-white bg-indigo-700 rounded-full" ]
+                                        prop.classes [ 
+                                            "focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 
+                                            focus:bg-indigo-500 hover:bg-indigo-500 text-base w-8 h-8 flex items-center 
+                                            justify-center font-medium text-white bg-indigo-700 rounded-full" ]
                                         prop.text day
                                     ]
                                 ]
@@ -121,7 +124,7 @@ module Calendar =
                 prop.classes [ "pt-4" ]
                 prop.children [
                     Html.div [
-                        prop.classes [ "px-2 py-2 cursor-pointer flex w-full justify-center" ]
+                        prop.classes [ "px-1 py-1 cursor-pointer flex w-full justify-center" ]
                         prop.children [
                             Html.p [
                                 prop.classes [ "text-base text-gray-500 dark:text-gray-100 font-medium" ]
@@ -177,7 +180,7 @@ module Calendar =
                     prop.classes [ "max-w-sm w-full shadow-lg"]
                     prop.children [
                         Html.div [
-                            prop.classes [ "md:p-8 md:pt-10 md:pb-6 p-5 dark:bg-gray-800 bg-white rounded-t"]
+                            prop.classes [ "md:p-8 p-5 md:pt-10 md:pb-10  dark:bg-gray-800 bg-white rounded-t"]
                             prop.children [
                                 Html.div [
                                     prop.classes [ "px-4 flex items-center justify-between"]
@@ -266,7 +269,13 @@ module Calendar =
                                                         renderWeek [ for i in 5..11 -> DayCard.Day(i, UnMarkedDay) ]
                                                         renderWeek [ for i in 12..18 -> DayCard.Day(i, UnMarkedDay) ]
                                                         renderWeek [ for i in 19..25 -> DayCard.Day(i, UnMarkedDay) ]
-                                                        renderWeek [ for i in 26..32 -> (if i > 30 then DayCard.EmptyDay else DayCard.Day(i, UnMarkedDay)) ]
+                                                        renderWeek [ 
+                                                            for i in 26..32 -> (
+                                                                if i > 30 
+                                                                then DayCard.EmptyDay 
+                                                                else DayCard.Day(i, UnMarkedDay)
+                                                            ) 
+                                                        ]
                                                     ]
                                                 ]
                                             ]
@@ -276,7 +285,7 @@ module Calendar =
                             ]
                         ]
                         Html.div [
-                            prop.classes [ "md:py-8 py-5 md:px-16 px-5 dark:bg-gray-700 bg-gray-50 rounded-b" ]
+                            prop.classes [ "md:p-8 py-5 md:px-8 px-5 md:pb-10 dark:bg-gray-700 bg-gray-50 rounded-b" ]
                             prop.children [
                                 Html.div [
                                     prop.classes [ "px-4" ]
